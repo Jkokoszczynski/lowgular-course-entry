@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { EmployeeModel } from '../../model/employee.model';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
   selector: 'employee-list',
@@ -11,9 +12,9 @@ import { EmployeeModel } from '../../model/employee.model';
 })
 export class EmployeeListComponent {
 
-  data$: Observable<EmployeeModel[] | null> = this._httpClient.get<EmployeeModel[]>("assets/data/employees.json");
+  data$: Observable<EmployeeModel[] | null> = this._employeeService.getall();
 
 
-  constructor(private _httpClient: HttpClient) {
+  constructor( private _employeeService: EmployeeService) {
   }
 }
