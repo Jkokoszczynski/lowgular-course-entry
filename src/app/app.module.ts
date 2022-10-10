@@ -16,6 +16,7 @@ import {EmployeeServiceModule} from "./services/employee.service-module";
     EmployeeListComponentModule,
     EmployeeServiceModule,
     FacesComponentModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

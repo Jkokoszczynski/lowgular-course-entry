@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { EmployeeService } from '../../services/employee.service';
 import {PersonModel} from "../../model/person.model";
 
+
 @Component({
   selector: 'employee-list',
   templateUrl: './employee-list.component.html',
@@ -11,7 +12,7 @@ import {PersonModel} from "../../model/person.model";
 })
 export class EmployeeListComponent {
 
-  data$: Observable<PersonModel[] | null> = this._employeeService.getall();
+  data$: Observable<PersonModel[] | null> = this._employeeService.getAll()
 
 
   constructor( private _employeeService: EmployeeService) {

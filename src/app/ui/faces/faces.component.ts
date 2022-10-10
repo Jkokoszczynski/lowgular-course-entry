@@ -10,6 +10,7 @@ import {PersonModel} from "../../model/person.model";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FacesComponent {
-  data$: Observable<PersonModel[]> = this._employeeService.getall();
-  constructor( private _employeeService: EmployeeService) { }
+  data$: Observable<PersonModel[]> = this._employeeService.getAll();
+  constructor( private _employeeService: EmployeeService) {
+  }
 }
