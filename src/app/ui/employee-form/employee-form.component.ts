@@ -17,7 +17,7 @@ export class EmployeeFormComponent {
 
 onButtonclicked(text: {email:string, age:string, salary:string} ) {
 
-alert('user was successfully added to the database email: ' +text.email +text.age + text.salary);
+alert('user was successfully added to the database email: ' +text.email + ' age: ' + text.age+ ' salary: '  + text.salary);
 
 
 }
