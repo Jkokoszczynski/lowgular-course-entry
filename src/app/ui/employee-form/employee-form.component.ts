@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import {FormControl, FormGroup, } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -14,11 +15,12 @@ export class EmployeeFormComponent {
     salary: new FormControl()
   });
 
+  constructor(private _employeeService: EmployeeService) {
+  }
 
-onButtonclicked(text: {email:string, age:string, salary:string} ) {
-
-alert('user was successfully added to the database email: ' +text.email + ' age: ' + text.age+ ' salary: '  + text.salary);
+  onButtonclicked(text: { email: string, age: string, salary: string }) {
 
 
-}
+
+  }
 }
